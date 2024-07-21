@@ -48,8 +48,6 @@ class EasyPresence extends SocketManager_1.SocketManager {
             }
         }
         catch (e) {
-            // console operations in a library are not great, however i don't really want to cause an exception.
-            console.warn("EasyPresence couldn't set activity. Trying again in a few.", e);
             this.scheduledReconnect = true;
             setTimeout(() => {
                 this.cooldown = false;
